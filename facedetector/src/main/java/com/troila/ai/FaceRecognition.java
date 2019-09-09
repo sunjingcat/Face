@@ -16,6 +16,7 @@ public class FaceRecognition {
         System.loadLibrary("SeetaFaceLandmarker2");
         System.loadLibrary("SeetaFaceRecognizer2");
         System.loadLibrary("seetanet2");
+
         System.loadLibrary("fr_android");
     }
 
@@ -23,16 +24,16 @@ public class FaceRecognition {
     // public native int init();
     //public native int[][] gray(char[] modelpath, byte[] buf, int w, int h);
 
-    public native int extractModel(char[] srcPath, char[] dstPath);
+    public native boolean extractModel(char[] srcPath, char[] dstPath);
 
-    public native int initModel(char[] sModelPath,int minFace, int distCacheSize, double distThreshold);
+    public native boolean initModel(char[] sModelPath,int minFace, int distCacheSize, double distThreshold);
     //新接口，输出一个15维向量。1-4元素为人脸框位置（左上坐标和右下坐标），5-14为5个关键点坐标，15为姿态判断结果（1是符合，0是不符合）
     public native int[] detectFace(byte[] _pstImageData, int iWidth, int iHeight);
 
     //最后的int数组传入上面的关键点坐标
-    public native float[] getFaceFeature(byte[] _pstImageData, int iWidth, int iHeight, int[] _pstFAResult);
+    public native float[] getFeature(byte[] _pstImageData, int iWidth, int iHeight, int[] _pstFAResult);
 
-    public native float faceMatch(float[] feats1, float[] feats2);
+    public native float getSimilarity(float[] feats1, float[] feats2);
 
     //public native  int initModelServer(char[] sModelPath);
     // 获取 n 维 4列  n =0 无效图片
