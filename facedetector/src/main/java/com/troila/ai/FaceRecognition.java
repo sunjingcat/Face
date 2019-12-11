@@ -17,7 +17,7 @@ public class FaceRecognition {
         System.loadLibrary("SeetaFaceRecognizer2");
         System.loadLibrary("seetanet2");
 
-        System.loadLibrary("android");
+        System.loadLibrary("fr_android");
     }
 
 //public native int testHello(float  a,float b,byte[] arg1,byte[]arg2);
