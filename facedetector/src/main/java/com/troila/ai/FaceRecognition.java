@@ -12,10 +12,10 @@ public class FaceRecognition {
         //System.loadLibrary("seeta_fa_lib");
         //System.loadLibrary("viplnet");
         //System.load("/data/local/tmp/libviplnet.so.4.5");//红米需要这样调用
-        System.loadLibrary("SeetaFaceDetector");
-        System.loadLibrary("SeetaFaceLandmarker");
-        System.loadLibrary("SeetaFaceRecognizer");
-        System.loadLibrary("SeetaNet");
+        System.loadLibrary("SeetaFaceDetector2");
+        System.loadLibrary("SeetaFaceLandmarker2");
+        System.loadLibrary("SeetaFaceRecognizer2");
+        System.loadLibrary("seetanet2");
 
         System.loadLibrary("fr_android");
     }
