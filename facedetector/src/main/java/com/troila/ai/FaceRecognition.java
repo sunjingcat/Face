@@ -26,7 +26,7 @@ public class FaceRecognition {
 
     public native boolean extractModel(char[] srcPath, char[] dstPath);
 
-    public native boolean initModel(char[] sModelPath,int minFace, int distCacheSize, double distThreshold);
+    public native int initModel(char[] sModelPath,int minFace, int distCacheSize, double distThreshold);
     //新接口，输出一个15维向量。1-4元素为人脸框位置（左上坐标和右下坐标），5-14为5个关键点坐标，15为姿态判断结果（1是符合，0是不符合）
     public native int[] detectFace(byte[] _pstImageData, int iWidth, int iHeight);
 
